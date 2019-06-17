@@ -1,5 +1,9 @@
 # URL Parser
 
+![version](https://img.shields.io/npm/v/url-params-parser.svg)
+![license](https://img.shields.io/github/license/jorgegorka/url-params-parser.svg)
+![Code climate](https://img.shields.io/codeclimate/maintainability/jorgegorka/url-params-parser.svg)
+
 Handle named params and query params easily.
 
 This package relies heavily in the native [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL) (no need to reinvent the wheel). It just adds some extra methods to handle params (both query and named params).

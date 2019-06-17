@@ -1,7 +1,7 @@
 {
   "name": "url-params-parser",
   "version": "1.0.0",
-  "description": "Url parser with named and query params",
+  "description": "Url parser to extract named and query params",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -12,5 +12,20 @@
     "mocha": "^6.1.4"
   },
   "author": "Jorge Alvarez <jorge@alvareznavarro.es>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgegorka/url-params-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/jorgegorka/url-params-parser/issues"
+  },
+  "homepage": "https://github.com/jorgegorka/url-params-parser/blob/master/README.md",
+  "keywords": [
+    "url",
+    "parser",
+    "pathname",
+    "named params",
+    "query params"
+  ]
 }
