@@ -29,6 +29,8 @@ yarn add url-params-parser
 Initialize the object with a route and a placeholder. Example:
 
 ```:javascript
+import { UrlParser } from 'url-params-parser'
+
 const urlParser = UrlParser(
   "https://address.com:99/employees/show/1234/developer/reports/asc/?climate=change&sea-level=rising",
   "/employees/show/:id/:title/reports/:order"
