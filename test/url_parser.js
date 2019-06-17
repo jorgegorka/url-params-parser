@@ -148,6 +148,17 @@ describe("UrlParser", () => {
           order: "asc"
         });
       });
+
+      it("should return the path name as an array of elements", () => {
+        expect(UrlParser(urlAddress, urlPattern).pathNames).to.deep.equal([
+          "employees",
+          "show",
+          "1234",
+          "developer",
+          "reports",
+          "asc"
+        ]);
+      });
     });
   });
 });

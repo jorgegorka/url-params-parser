@@ -18,7 +18,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns the named params and their values as an object
+   * Returns an object with all the named params and their values
    *
    **/
   function namedParams() {
@@ -32,7 +32,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array of named params keys
+   * Returns an array with all the named param keys
    *
    **/
   function namedParamsKeys() {
@@ -45,7 +45,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array of named params values
+   * Returns an array with all the named param values
    *
    **/
   function namedParamsValues() {
@@ -59,8 +59,8 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array of named param ids with their position in the url
-   *
+   * Returns an array with all named param ids and their position in the path
+   * Private
    **/
   function namedParamsWithIndex() {
     const namedUrlParams = getPathNames(namedUrl);
@@ -106,7 +106,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array with all query params and their values
+   * Returns an object with all query params and their values
    *
    **/
   function queryParams() {
@@ -119,7 +119,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array with all query params keys
+   * Returns an array with all the query param keys
    *
    **/
   function queryParamsKeys() {
@@ -132,7 +132,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array with all query params keys
+   * Returns an array with all the query param values
    *
    **/
   function queryParamsValues() {
@@ -145,7 +145,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   /**
-   * Returns an array with all the parts of the url pathname
+   * Returns an array with all the elements of a pathname
    *
    **/
   function pathNames() {
