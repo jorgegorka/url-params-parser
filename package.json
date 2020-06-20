@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
-    "mocha": "^6.1.4"
+    "eslint": "^7.0.0",
+    "mocha": "^8.0.0"
   },
   "author": "Jorge Alvarez <jorge@alvareznavarro.es>",
   "license": "MIT",
