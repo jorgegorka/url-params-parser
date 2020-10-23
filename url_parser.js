@@ -2,6 +2,14 @@ const UrlParser = (urlString, namedUrl = "") => {
   const urlBase = new URL(urlString);
 
   /**
+   * Wrapper for URL.hash
+   *
+   **/
+  function hash() {
+    return urlBase.hash;
+  }
+
+  /**
    * Wrapper for URL.host
    *
    **/
@@ -169,6 +177,7 @@ const UrlParser = (urlString, namedUrl = "") => {
   }
 
   return Object.freeze({
+    hash: hash(),
     host: host(),
     hostname: hostname(),
     namedParams: namedParams(),
