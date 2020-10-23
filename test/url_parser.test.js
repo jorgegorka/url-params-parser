@@ -41,21 +41,21 @@ describe("UrlParser", () => {
   it("should return the search queries as an object", () => {
     expect(UrlParser(urlAddress, urlPattern).queryParams).to.deep.equal({
       climate: "change",
-      "sea-level": "rising"
+      "sea-level": "rising",
     });
   });
 
   it("should return the search queries as an array with all keys", () => {
     expect(UrlParser(urlAddress, urlPattern).queryParamsKeys).to.deep.equal([
       "climate",
-      "sea-level"
+      "sea-level",
     ]);
   });
 
   it("should return the search queries as an array with all values", () => {
     expect(UrlParser(urlAddress, urlPattern).queryParamsValues).to.deep.equal([
       "change",
-      "rising"
+      "rising",
     ]);
   });
 
@@ -63,8 +63,20 @@ describe("UrlParser", () => {
     expect(UrlParser(urlAddress, urlPattern).pathNames).to.deep.equal([
       "route",
       "to",
-      "page"
+      "page",
     ]);
+  });
+
+  describe("A url with a hash", () => {
+    beforeEach(() => {
+      urlAddress =
+        "https://test.address.com:2603/1234/developer?climate=change&sea-level=rising#main";
+      urlPattern = "/:id/:title";
+    });
+
+    it("should return the hash part of the query", () => {
+      expect(UrlParser(urlAddress, urlPattern).hash).to.equal("#main");
+    });
   });
 
   describe("A url with named params", () => {
@@ -76,9 +88,9 @@ describe("UrlParser", () => {
       });
 
       it("should return the named params keys", () => {
-        expect(UrlParser(urlAddress, urlPattern).namedParamsKeys).to.deep.equal(
-          ["id", "title"]
-        );
+        expect(
+          UrlParser(urlAddress, urlPattern).namedParamsKeys
+        ).to.deep.equal(["id", "title"]);
       });
 
       it("should return the named params values", () => {
@@ -90,7 +102,7 @@ describe("UrlParser", () => {
       it("should return the named params as an object", () => {
         expect(UrlParser(urlAddress, urlPattern).namedParams).to.deep.equal({
           id: "1234",
-          title: "developer"
+          title: "developer",
         });
       });
     });
@@ -103,9 +115,9 @@ describe("UrlParser", () => {
       });
 
       it("should return the named params keys", () => {
-        expect(UrlParser(urlAddress, urlPattern).namedParamsKeys).to.deep.equal(
-          ["id", "title"]
-        );
+        expect(
+          UrlParser(urlAddress, urlPattern).namedParamsKeys
+        ).to.deep.equal(["id", "title"]);
       });
 
       it("should return the named params values", () => {
@@ -117,7 +129,7 @@ describe("UrlParser", () => {
       it("should return the named params as an object", () => {
         expect(UrlParser(urlAddress, urlPattern).namedParams).to.deep.equal({
           id: "1234",
-          title: "developer"
+          title: "developer",
         });
       });
     });
@@ -130,9 +142,9 @@ describe("UrlParser", () => {
       });
 
       it("should return the named params keys", () => {
-        expect(UrlParser(urlAddress, urlPattern).namedParamsKeys).to.deep.equal(
-          ["id", "title", "order"]
-        );
+        expect(
+          UrlParser(urlAddress, urlPattern).namedParamsKeys
+        ).to.deep.equal(["id", "title", "order"]);
       });
 
       it("should return the named params values", () => {
@@ -145,7 +157,7 @@ describe("UrlParser", () => {
         expect(UrlParser(urlAddress, urlPattern).namedParams).to.deep.equal({
           id: "1234",
           title: "developer",
-          order: "asc"
+          order: "asc",
         });
       });
 
@@ -156,7 +168,7 @@ describe("UrlParser", () => {
           "1234",
           "developer",
           "reports",
-          "asc"
+          "asc",
         ]);
       });
     });

@@ -1,6 +1,6 @@
 {
   "name": "url-params-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Url parser to extract named and query params",
   "main": "index.js",
   "scripts": {

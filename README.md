@@ -17,9 +17,9 @@ const urlParser = UrlParser(
   "https://address.com/employees/show/1234/developer/reports/asc",
   "/employees/show/:id/:title/reports/:order"
 )
-  
+
 urlParser.namedParams
-// returns { id: "1234", title: "developer", order: "asc" }  
+// returns { id: "1234", title: "developer", order: "asc" }
 )
 ```
 
@@ -183,6 +183,10 @@ urlParser.search
 ## Credits
 
 URL Parser has been developed by [Jorge Alvarez](https://www.alvareznavarro.es).
+
+### Contributors
+
+[David Kiss](https://github.com/xdavidkissx)
 
 ## License
 

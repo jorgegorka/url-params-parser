@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Return hash part of the pathname.
+
 ## 1.0.2
 
 - Bump eslint-utils from 1.3.1 to 1.4.3

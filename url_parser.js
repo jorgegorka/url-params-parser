@@ -145,7 +145,7 @@ const UrlParser = (urlString, namedUrl = "") => {
    **/
   function queryParamsValues() {
     const params = [];
-    urlBase.searchParams.forEach(value => {
+    urlBase.searchParams.forEach((value) => {
       params.push(value);
     });
 
@@ -190,7 +190,7 @@ const UrlParser = (urlString, namedUrl = "") => {
     search: search(),
     queryParams: queryParams(),
     queryParamsKeys: queryParamsKeys(),
-    queryParamsValues: queryParamsValues()
+    queryParamsValues: queryParamsValues(),
   });
 };
 
