@@ -49,7 +49,7 @@ import { UrlParser } from 'url-params-parser'
 // UrlParser(url, placeholder)
 
 const urlParser = UrlParser(
-  "https://address.com:99/employees/show/1234/developer/reports/asc/?climate=change&sea-level=rising",
+  "https://address.com:99/employees/show/1234/developer/reports/asc/?climate=change&sea-level=rising#danger",
   "/employees/show/:id/:title/reports/:order"
 )
 ```
@@ -115,6 +115,15 @@ Returns an array with all the elements of a pathname
 ```:javascript
 urlParser.pathNames
 // returns [ "employees", "show", "1234", "developer", "reports", "asc" ]
+```
+
+### hash
+
+Wrapper for URL().hash
+
+```:javascript
+urlParser.hash
+// returns "#danger"
 ```
 
 ### host
