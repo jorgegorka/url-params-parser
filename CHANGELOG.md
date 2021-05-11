@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Upgrade packages.
+
 ## 1.0.3
 
 - Return hash part of the pathname.
